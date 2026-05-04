@@ -396,14 +396,91 @@
       }
 
       footer {
-        padding: 28px 24px;
-        text-align: center;
+        padding: 56px 24px 28px;
         color: var(--text-muted);
+      }
+
+      .footer-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        border: 1px solid rgba(148, 163, 184, 0.14);
+        border-radius: 32px;
+        background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.82));
+        box-shadow: 0 24px 70px rgba(2, 6, 23, 0.28);
+        overflow: hidden;
+      }
+
+      .footer-main {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr 0.9fr;
+        gap: 32px;
+        padding: 36px;
+      }
+
+      .footer-brand h2 {
+        color: var(--text);
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+      }
+
+      .footer-brand p {
+        line-height: 1.7;
+        max-width: 440px;
+      }
+
+      .footer-title {
+        display: block;
+        margin-bottom: 16px;
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      .footer-links,
+      .footer-contact {
+        display: grid;
+        gap: 12px;
+      }
+
+      .footer-links a,
+      .footer-contact a {
+        color: var(--text-muted);
+        text-decoration: none;
+        transition: color 0.25s ease, transform 0.25s ease;
+      }
+
+      .footer-links a:hover,
+      .footer-contact a:hover {
+        color: var(--accent);
+        transform: translateX(4px);
+      }
+
+      .footer-contact a {
+        word-break: break-all;
+      }
+
+      .footer-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+        padding: 20px 36px;
+        border-top: 1px solid rgba(148, 163, 184, 0.12);
+        background: rgba(2, 6, 23, 0.24);
+      }
+
+      .footer-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--accent);
+        font-weight: 600;
       }
 
       @media (max-width: 1024px) {
         .split-grid,
-        .hero-stat-grid {
+        .hero-stat-grid,
+        .footer-main {
           grid-template-columns: 1fr;
         }
 
@@ -511,6 +588,8 @@
               <span class="badge">SQL Server</span>
               <span class="badge">Message Queues</span>
               <span class="badge">Windows Forms</span>
+              <span class="badge">Crystal Reports</span>
+              <span class="badge">RDLC Reports</span>
             </div>
           </div>
         </div>
@@ -643,6 +722,11 @@
             <a href="tel:01828396816">01828396816</a>
           </div>
           <div class="contact-tile">
+            <h4>Email</h4>
+            <span>Email me for collaboration, hiring, or project inquiries</span>
+            <a href="mailto:md.abdulawal96816@gmail.com">md.abdulawal96816@gmail.com</a>
+          </div>
+          <div class="contact-tile">
             <h4>LinkedIn</h4>
             <span>Connect for professional opportunities and portfolio updates</span>
             <a href="https://www.linkedin.com/in/md-abdul-awal-504429147/" target="_blank">linkedin.com/in/md-abdul-awal-504429147</a>
@@ -652,7 +736,40 @@
     </main>
 
     <footer>
-      <p>© 2026 Md Abdul Awal. Designed as a modern professional portfolio.</p>
+      <div class="footer-container">
+        <div class="footer-main">
+          <div class="footer-brand">
+            <h2>Md Abdul Awal</h2>
+            <p>
+              Senior .NET Developer building reliable enterprise applications, scalable APIs, reporting systems, and business automation tools.
+            </p>
+          </div>
+
+          <div>
+            <span class="footer-title">Quick Links</span>
+            <div class="footer-links">
+              <a href="#about">About</a>
+              <a href="#skills">Skills</a>
+              <a href="#projects">Projects</a>
+              <a href="#experience">Experience</a>
+            </div>
+          </div>
+
+          <div>
+            <span class="footer-title">Let's Connect</span>
+            <div class="footer-contact">
+              <a href="mailto:md.abdulawal96816@gmail.com"><i class="fas fa-envelope"></i> md.abdulawal96816@gmail.com</a>
+              <a href="tel:01828396816"><i class="fas fa-phone"></i> 01828396816</a>
+              <a href="https://www.linkedin.com/in/md-abdul-awal-504429147/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn Profile</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Md Abdul Awal. All rights reserved.</p>
+          <span class="footer-badge"><i class="fas fa-code"></i> Built with clean code and business focus</span>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
